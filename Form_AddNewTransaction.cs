@@ -17,16 +17,26 @@ namespace Capstone_Project
         public Form_AddNewTransaction()
         {
             InitializeComponent();
-            InitializeForm();
+            InitializeForm();       
         }
 
+        /// <summary>
+        /// Method to load the combobox with the service list
+        /// </summary>
         private void InitializeForm()
         {
             cmboBox_Services.DataSource = Enum.GetNames(typeof(HomeClass.ServiceList));
+
+            //show the name and ID on the form
             txtBox_Name.Text = HomeClass.GetCustName();
             txtBox_CustId.Text = HomeClass.GetCustId();
         }
 
+        /// <summary>
+        /// Method gets user service selection, 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cmboBox_Services_SelectedIndexChanged(object sender, EventArgs e)
         {
             Btn_AddService.Enabled = true;
@@ -35,6 +45,7 @@ namespace Capstone_Project
 
             Enum.TryParse(selection, out HomeClass.ServiceList service);
 
+            //if payment, enabling the textbox Amount to enter a payment amount
             if (service == HomeClass.ServiceList.Payment)
             {
                 paymentSelected = true;
@@ -45,6 +56,8 @@ namespace Capstone_Project
             }
             else
             {
+                //otherwise show the cost of the service in the textbox Amount
+
                 paymentSelected = false;
                 amount = HomeClass.ServiceAndCost[service];
                 lbl_ServiceDescription.Text = "Cost for " + selection;
@@ -52,6 +65,13 @@ namespace Capstone_Project
                 txtBox_Amount.Text = amount.ToString();   
             }
         }
+
+        /// <summary>
+        /// Method button to validate the selection was made
+        /// and update the transaction list
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Btn_AddService_Click(object sender, EventArgs e)
         {
             bool goodTransaction = false;

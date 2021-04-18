@@ -17,6 +17,11 @@ namespace Capstone_Project
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Method exiting all the forms and closing the app
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Btn_Quit_App_Click(object sender, EventArgs e)
         {
             System.Environment.Exit(0);

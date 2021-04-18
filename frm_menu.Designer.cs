@@ -41,7 +41,7 @@ namespace Capstone_Project
             this.label1.Location = new System.Drawing.Point(194, 58);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 34);
+            this.label1.Size = new System.Drawing.Size(225, 84);
             this.label1.TabIndex = 0;
             this.label1.Text = "MENU";
             // 
@@ -78,7 +78,7 @@ namespace Capstone_Project
             this.Font = new System.Drawing.Font("Proxima Nova Rg", 8.099999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frm_menu";
-            this.Text = " ";
+            this.Text = " Menu";
             this.ResumeLayout(false);
             this.PerformLayout();
 

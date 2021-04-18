@@ -47,7 +47,7 @@ namespace Capstone_Project
             this.txtBox_Name.Location = new System.Drawing.Point(36, 34);
             this.txtBox_Name.Name = "txtBox_Name";
             this.txtBox_Name.ReadOnly = true;
-            this.txtBox_Name.Size = new System.Drawing.Size(358, 16);
+            this.txtBox_Name.Size = new System.Drawing.Size(358, 40);
             this.txtBox_Name.TabIndex = 0;
             this.txtBox_Name.Text = "Name";
             // 
@@ -57,7 +57,7 @@ namespace Capstone_Project
             this.txtBox_CustId.Location = new System.Drawing.Point(36, 68);
             this.txtBox_CustId.Name = "txtBox_CustId";
             this.txtBox_CustId.ReadOnly = true;
-            this.txtBox_CustId.Size = new System.Drawing.Size(358, 16);
+            this.txtBox_CustId.Size = new System.Drawing.Size(358, 40);
             this.txtBox_CustId.TabIndex = 1;
             this.txtBox_CustId.Text = "Cust ID";
             // 
@@ -66,7 +66,7 @@ namespace Capstone_Project
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(33, 173);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 16);
+            this.label1.Size = new System.Drawing.Size(224, 41);
             this.label1.TabIndex = 2;
             this.label1.Text = "Select Service";
             // 
@@ -75,7 +75,7 @@ namespace Capstone_Project
             this.cmboBox_Services.FormattingEnabled = true;
             this.cmboBox_Services.Location = new System.Drawing.Point(36, 213);
             this.cmboBox_Services.Name = "cmboBox_Services";
-            this.cmboBox_Services.Size = new System.Drawing.Size(165, 24);
+            this.cmboBox_Services.Size = new System.Drawing.Size(165, 48);
             this.cmboBox_Services.TabIndex = 3;
             this.cmboBox_Services.SelectedIndexChanged += new System.EventHandler(this.cmboBox_Services_SelectedIndexChanged);
             // 
@@ -84,17 +84,16 @@ namespace Capstone_Project
             this.lbl_ServiceDescription.AutoSize = true;
             this.lbl_ServiceDescription.Location = new System.Drawing.Point(33, 263);
             this.lbl_ServiceDescription.Name = "lbl_ServiceDescription";
-            this.lbl_ServiceDescription.Size = new System.Drawing.Size(74, 16);
+            this.lbl_ServiceDescription.Size = new System.Drawing.Size(180, 41);
             this.lbl_ServiceDescription.TabIndex = 4;
             this.lbl_ServiceDescription.Text = "Description";
             // 
             // txtBox_Amount
             // 
-            this.txtBox_Amount.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtBox_Amount.Location = new System.Drawing.Point(165, 265);
+            this.txtBox_Amount.Location = new System.Drawing.Point(187, 260);
             this.txtBox_Amount.Name = "txtBox_Amount";
             this.txtBox_Amount.ReadOnly = true;
-            this.txtBox_Amount.Size = new System.Drawing.Size(68, 16);
+            this.txtBox_Amount.Size = new System.Drawing.Size(68, 47);
             this.txtBox_Amount.TabIndex = 5;
             this.txtBox_Amount.Text = "Amount";
             // 
@@ -121,9 +120,9 @@ namespace Capstone_Project
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(150, 263);
+            this.label2.Location = new System.Drawing.Point(167, 263);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(16, 16);
+            this.label2.Size = new System.Drawing.Size(38, 41);
             this.label2.TabIndex = 8;
             this.label2.Text = "$";
             // 

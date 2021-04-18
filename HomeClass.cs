@@ -7,9 +7,9 @@ using System.IO;
 
 namespace Capstone_Project
 {
-    static class HomeClass
+    static class HomeClass      //static to be accessible by all the forms in the app
     {
-        public enum ServiceList
+        public enum ServiceList    //used in combobox to display services, and dictionary
         {
             Lesson10Min,
             Lesson15Min,
@@ -20,9 +20,12 @@ namespace Capstone_Project
             Boots,
             Payment
         }
-
+        
+        //public is accessible by all the forms
+        //private is accessible by methods in this class
         public static Dictionary<ServiceList, double> ServiceAndCost = new Dictionary<ServiceList, double>();
 
+        //set paths and lists for the text files
 
         private static string CustListFilePath = @"CapstoneFiles\customers.txt";
         public static List<string> CustList = new List<string>();
@@ -31,11 +34,14 @@ namespace Capstone_Project
         private static string CustomerServicesListFilePath = @"CapstoneFiles\customer_services.txt";
         public static List<string> CustomerServicesList = new List<string>();
 
+        //to store customer info to be used in the get and set methods below
+
         private static string CustId;
         private static string CustName;
         private static string CustMail;
-
         private static string UserSelect;
+
+        //dictionary 
 
         public static void InitializeServiceAndCost()
         {
@@ -50,6 +56,10 @@ namespace Capstone_Project
 
         }
 
+        /// <summary>
+        /// Method calling the method (WriteToFile) to write 
+        /// information from the txt files to the lists
+        /// </summary>
         internal static void WriteListsToFile()
         {
             string filePath;
@@ -62,6 +72,11 @@ namespace Capstone_Project
 
         }
 
+        /// <summary>
+        /// Method writing the updated list back into the files
+        /// </summary>
+        /// <param name="custList"></param>
+        /// <param name="filePath"></param>
         private static void WriteToFile(List<string> custList, string filePath)
         {
             try
@@ -82,6 +97,7 @@ namespace Capstone_Project
             }
         }
 
+        //Methods to store and return user input/choices
         public static void SetUserSelect(string userSelect)
         {
             UserSelect = userSelect;
@@ -114,18 +130,6 @@ namespace Capstone_Project
         }
 
 
-        public static string GetNextCustomerID()
-        {
-            IdList.Sort();
-            string item = IdList[IdList.Count - 1];
-            int custId;
-            int.TryParse(item, out custId);
-            int nextCustId = custId + 1;
-
-            IdList.Add(nextCustId.ToString());
-            return nextCustId.ToString();
-        }
-
         public static void SetCustMail(string custMail)
         {
             CustMail = custMail;
@@ -147,8 +151,6 @@ namespace Capstone_Project
             return CustId;
         }
 
-
-
         public static void SetCustName(string firstName, string lastName)
         {
             CustName = firstName + " " + lastName;
@@ -159,7 +161,27 @@ namespace Capstone_Project
             return CustName;
         }
 
+        /// <summary>
+        /// Method taking list of existsing ID's and finds next id #
+        /// </summary>
+        /// <returns></returns>
+        public static string GetNextCustomerID()
+        {
+            IdList.Sort();
+            string item = IdList[IdList.Count - 1];
+            int custId;
+            int.TryParse(item, out custId);
+            int nextCustId = custId + 1;
 
+            IdList.Add(nextCustId.ToString());
+            return nextCustId.ToString();
+        }
+
+        /// <summary>
+        /// Method reading from files and writing to lists.
+        /// </summary>
+        /// <param name="custListFilePath"></param>
+        /// <returns></returns>
         private static List<string> LoadListFromFile(string custListFilePath)
         {
             List<string> fileItems = new List<string>();

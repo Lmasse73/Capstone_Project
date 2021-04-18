@@ -17,7 +17,10 @@ namespace Capstone_Project
             InitializeComponent();
             LoadCustomers();
         }
-
+        /// <summary>
+        /// Method to get the current stored list in Homeclass and placing it
+        /// in custlist.  Uses the custlist to show in combobox.
+        /// </summary>
         private void LoadCustomers()
         {
             cmbBox_CustList.Items.Clear();
@@ -33,17 +36,34 @@ namespace Capstone_Project
             }
         }
 
+        /// <summary>
+        /// Method to open AddCust Form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_addcust_Click(object sender, EventArgs e)
         {
             Form_AddCust addCustForm = new Form_AddCust();
             addCustForm.Show();
         }
 
+        /// <summary>
+        /// To reload the customer list to the combobox, after creating new customer.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_refresh_customer_list_Click(object sender, EventArgs e)
         {
             LoadCustomers();
         }
 
+        /// <summary>
+        /// Method button to get a selected customer and store the cust information 
+        /// in the SET methods in the homeclass.  Will be used in the Add Services Form.
+        /// Opens the Add Services Form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Btn_Services_Click(object sender, EventArgs e)
         {
             if (cmbBox_CustList.SelectedIndex == -1)
@@ -62,6 +82,11 @@ namespace Capstone_Project
             }
         }
 
+        /// <summary>
+        /// Close the cust form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Btn_Back_Click(object sender, EventArgs e)
         {
             this.Close();

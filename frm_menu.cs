@@ -18,26 +18,22 @@ namespace Capstone_Project
             InitializeComponent();
         }
 
-        private void rdbtn_customer_CheckedChanged(object sender, EventArgs e)
-        {
-            HomeClass.SetUserSelect("customer");
-
-        }
-
-        private void rdbtn_services_CheckedChanged(object sender, EventArgs e)
-        {
-            HomeClass.SetUserSelect("services");
-
-        }
-
-
+        /// <summary>
+        /// Quit button, opens form quit
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_quit_Click(object sender, EventArgs e)
         {
             HomeClass.WriteListsToFile();
             Form_Quit quitfrm = new Form_Quit();
             quitfrm.Show();
         }
-
+        /// <summary>
+        /// Customer Button, customer form opens
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Btn_Cust_Click(object sender, EventArgs e)
         {
             frm_customer custForm = new frm_customer();

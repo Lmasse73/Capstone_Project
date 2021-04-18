@@ -122,7 +122,6 @@ namespace Capstone_Project
             this.Controls.Add(this.label1);
             this.Name = "Form_AddCust";
             this.Text = "Add New Customer";
-            this.Load += new System.EventHandler(this.Form_AddCust_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
